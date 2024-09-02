@@ -1,0 +1,121 @@
+.scroll-guidance-container {
+    position: fixed;
+    top:50dvh;
+    left:0;
+    width: 100px;
+
+    transform: translateY(-50%);
+    /* height: 100dvh; */
+    vertical-align: middle;
+    
+
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+    
+    position: relative;
+    /* bottom : 0%;
+    right: 10%; */
+    /* background-color: rgba(255,0,0,0.5); */
+}
+
+.scroll-guidance-item {
+    width: 15px;
+    height: 15px;
+    margin: 15px;
+    /* flex: 1 0 calc(100% / 5);
+    max-width: calc(100% / 5); */
+    box-sizing: border-box;
+    /* border-radius: 60%; */
+    border-radius: 50%;
+    text-align: center;
+
+    background-color: rgba(0,0,0,0.08);
+    cursor: pointer;
+}
+
+.scroll-guidance-item-text {
+    display: none;
+}
+
+.scroll-guidance-item:hover {
+    transform: scale(3);
+}
+
+.scroll-guidance-item:hover .scroll-guidance-item-text {
+    display: inline;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.scroll-guidance-item.selected {
+    background-color: rgba(255,0,0,0.2);
+}
+
+/* .scroll-guidance-container > a {
+    padding-top: 60px;
+}
+
+.scroll-guidance-container > a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+.scroll-guidance-container > a span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: sdb 2s infinite;
+    animation: sdb 2s infinite;
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb {
+    0% {
+        -webkit-transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes sdb {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+} */

@@ -1,0 +1,22 @@
+.input-checkbox-container {
+    width: 85%;
+    box-sizing: border-box;
+    margin: 10px auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-checkbox-container label {
+    display: inline-block;
+    background: white;
+    font-size: 14px;
+    color: #888;
+    font-weight: bold;
+}
+
+.input-checkbox-container input[type=checkbox] {
+    margin-right: 10px;
+}

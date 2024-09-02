@@ -1,0 +1,57 @@
+.loading-screen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5000000000;
+    transition: opacity 1s;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eef2ff; /* Equivalent to bg-indigo-50 */
+}
+
+.loading-screen-box {
+    font-size: 2.25rem; /* Equivalent to text-4xl */
+    font-weight: bold;
+    color: #1e3a8a; /* Equivalent to text-indigo-900 */
+    position: relative;
+}
+
+.loading-screen-item {
+    /* border: 5px solid blue; */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    clip-path: inset(0% 100% 0% 0%);
+    background-image: url('assets/image/logo-mrlee-story-horizontal.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50dvw;
+    height: 20dvh;
+    border-bottom: 3px solid rgba(100, 100, 100, 1);
+}
+
+.loading-screen-item-background {
+    /* border: 5px solid red; */
+    background-image: url('assets/image/logo-mrlee-story-horizontal.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50dvw;
+    height: 20dvh;
+    filter: blur(3px);
+    border-bottom: 3px solid rgba(100, 100, 100, 0.7);
+    
+}
+
+
+@media (min-width: 768px) {
+    .loading-screen-box {
+        font-size: 6rem; /* Equivalent to md:text-9xl */
+    }
+}

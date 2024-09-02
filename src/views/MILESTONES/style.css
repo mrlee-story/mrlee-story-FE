@@ -1,0 +1,276 @@
+#portfolio-container {
+    position: relative;
+    width: 100dvw;
+    height: auto;
+    margin-top: 10dvh;
+    display: flex;
+    overflow: hidden;
+}
+
+.portfolio-fixed-nav-box {
+    position: fixed;
+    top: 10dvh;
+    left: 2dvw;
+    width: 18dvw;
+    height: 90dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-fixed-nav-box > * {
+    width: 100%;
+}
+
+/** 1열 1행*/
+.portfolio-title {
+    height: 10dvh;
+    text-align: center; 
+}
+.portfolio-title h1 {
+    display: inline;
+    font-size: 2rem; 
+    line-height: 1.375;
+    color: rgba(0, 0, 0, 0.7);
+    font-family:'감탄로드돋움체-Bold';
+}
+.portfolio-title p {
+    font-size: 0.7rem;
+    display: inline;
+    line-height: 1.375;
+    color: rgba(0, 0, 0, 0.7);
+    font-family:'감탄로드돋움체-Bold';
+}
+
+/** 1열 2행*/
+.scroll-arrow {
+    background-color: rgba(230, 230, 230, 1);
+    color: rgba(70, 70, 70, 1);
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+.left-arrow, .right-arrow {
+    display: none;
+}
+.scroll-arrow:hover {
+    background-color: rgba(70, 70, 70, 0.3);
+    color: rgba(230, 230, 230, 1);
+}
+.portfolio-prev-button-box {
+    width: 100%;
+    height: 5dvh;
+    /* 
+    height: 5dvh;
+    left: 0;
+    top: 20dvh;
+    margin-left: 2dvw;
+    float: left; */
+}
+
+
+/** 1열 3행*/
+.portfolio-nav-wrapper {
+    height: 70dvh;
+    overflow: auto; 
+}
+
+/** 1열 4행*/
+.portfolio-next-button-box {
+    width: 100%;
+    height: 5dvh;
+}
+
+/** 2열 전체 */
+.portfolio-content-wrapper {
+    margin-left: 20dvw; /* column1의 너비 18dvw + left margin 2dvw */
+    width: 80dvw;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #838383; /* 예시 배경색 */
+    
+    /* border: 1px solid red;
+    margin-left: 20dvw;
+    width: 80dvw;
+    height: 90dvh;
+    margin-top: 10dvh; */
+}
+
+.portfolio-project-item-box {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 30%;
+    
+}
+
+/* .portfolio-project-item-box:hover {
+    background-color: rgba(0, 0, 0, 0.2)
+} */
+
+.portfolio-project-item {
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.portfolio-project-item:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-project-item.selected {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-project-item-thumbnail-box {
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+    
+}
+.portfolio-project-item-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: coverdown;
+    /* width: 100%;
+    height: 100%; */
+
+    /* width: 80%; */
+    /* height: auto; */
+    /* min-height: 80%; */
+    /* height: 80%; */
+}
+
+.portfolio-project-item-name {
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+
+/************************* 모바일(태블릿 세로 포함)  *************************/
+@media (max-width:767px) {
+    #portfolio-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .portfolio-fixed-nav-box {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100dvw;
+        height: 30dvh;
+        display: grid;
+        grid-template-rows: 10dvh 20dvh;
+        grid-template-columns: 10dvw 80dvw 10dvw;
+    }
+    
+    .portfolio-prev-button-box,
+    .portfolio-nav-wrapper,
+    .portfolio-next-button-box {
+        grid-row: 2 / 3;
+    }
+
+    /** 제목 */
+    .portfolio-title {
+        grid-row: 1 / 2;
+        grid-column: 1 / 4;
+        width: 100%; /* 너비를 100%로 설정 */
+        height: 10dvh; /* 높이를 자동으로 조정 */
+
+        /* display: block;
+        position: relative;
+        margin-left: 0;
+        width: 100dvw;
+        height: 10dvh;
+        text-align: center;
+        top: 0; */
+    }
+
+    /** 이전 버튼 */
+    .up-arrow, .down-arrow {
+        display: none;
+    }
+    .left-arrow {
+        display: block;
+    }
+    .portfolio-prev-button-box {
+        /* right: 0;
+        top: 20dvh;
+        float: left; */
+
+        grid-column: 1 / 2;
+        display: inline-flex;
+        height: 20dvh;
+        width: 10dvw;
+        vertical-align: top;
+    }
+
+    /** Nav */
+    .portfolio-nav-wrapper {
+        /* border: 2px solid red; */
+        grid-column: 2 / 3;
+        display: inline-flex;
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        position: relative;
+        margin-left: 0;
+
+        /* width: 80dvw; */
+        height: 20dvh;
+        top: 0;
+        float: left;
+    
+        /* display: flex;
+        flex-direction: column; */
+    
+        overflow: auto;
+    }
+
+    /** 다음 버튼 */
+    .right-arrow {
+        display: block;
+    }    
+    .portfolio-next-button-box {
+        /* right: 0;
+        top: 20dvh;
+        float: left; */
+        grid-column: 3 / 4;
+        display: inline-flex;
+        height: 20dvh;
+        width: 10dvw;
+        vertical-align: top;
+    }
+
+    .portfolio-project-item {
+        width: 40dvw;
+    }
+
+    .portfolio-project-item-box {
+        /* border: 1px solid black; */
+        width: 40dvw;
+        height: 100%;
+    }
+    .portfolio-project-item-name {
+        display: block;
+        font-size: 2dvw;
+        white-space: unset;
+        font-weight: bold;
+        text-overflow:ellipsis;	
+        overflow:hidden;
+        word-wrap:break-word;
+    }
+
+    .portfolio-content-wrapper { 
+        position: static;
+        margin-left: 0;
+        /* margin-top: 40dvh; */
+        width: 100%;
+        height: auto;
+        /* margin-top: dvh; */
+    }
+}

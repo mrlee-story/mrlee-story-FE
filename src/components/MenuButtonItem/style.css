@@ -1,0 +1,29 @@
+.menu-button {
+  position: relative;
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700; /* font-bold */
+  border: none;
+  background: none;
+  padding: none;
+  /* transition-property: color;
+  transition-duration: 150ms; */
+}
+
+.menu-button:not(.selected-menu) {
+  cursor: pointer; /* cursor-pointer */
+}
+
+.menu-button:not(.selected-menu)::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  bottom: -1%;
+  left: 0;
+  transition: all 0.3s;
+  z-index: -1;
+}
+.menu-button:not(.selected-menu):hover::before {
+  width: 100%;
+}

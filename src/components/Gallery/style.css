@@ -1,0 +1,72 @@
+/* 전체 컨테이너 */
+.gallery-container {
+    width: 70dvw;
+    height: 90dvh;
+    margin-top: 5dvh!important;
+    margin-left: 5dvw!important;
+    display: flex;
+    border: 2px solid red;
+    /* justify-content: center;
+    align-items: center; */
+    overflow: scroll;
+    position: relative;
+}
+
+/* 갤러리 그리드 */
+.gallery-grid {
+    /* display: grid;
+    width: 50%;
+    height: 100%;
+    overflow: scroll;
+
+    margin-left: 15dvw;
+    
+    box-sizing: border-box; */
+}
+
+/* 각 이미지 아이템 */
+.gallery-item {
+    /* position: relative;
+    overflow: hidden; */
+    /* margin: 0.2dvw; */
+
+    /* border: 1px solid black; */
+    /* position: relative; */
+    cursor: pointer;
+}
+
+.gallery-item-background {
+    position: relative;
+}
+
+.gallery-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50000000;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease, z-index 0s ease 0.3s;
+}
+
+.gallery-item img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index:0;
+    transition: transform 0.3s ease, z-index 0s ease 0.3s;
+}
+
+/* 마우스 hover 시 확대 효과 */
+.gallery-item:hover img {
+    transform: scale(20);
+    z-index: 500000000;
+    transition: transform 0.3s ease, z-index 0s, z-index 0s;
+}
+
+.gallery-item:hover .gallery-filter {
+    display: none;
+    z-index: 0;
+    transition: transform 0.3s ease, z-index 0s, z-index 0s;
+}

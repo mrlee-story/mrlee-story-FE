@@ -1,0 +1,76 @@
+/************************* 데스크탑(테블릿 가로 포함)  *************************/
+#footer {
+    position: absolute;
+    left: 0vw;
+    bottom: 3dvh;
+    display: flex;
+    height: 15dvh;
+    z-index: 500;
+    width: 100dvw;
+}
+
+.footer-container {
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    display: block;
+    justify-content: center;
+    height: 100%;
+}
+
+.footer-logo-box {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    margin: 0.1dvh;
+}
+
+.footer-social-box {
+    display: flex;
+    /* flex-direction: row; */
+    width: 30dvw;
+    height: 20%;
+    /* flex-grow: 1; */
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.footer-social-item {
+    display: block;
+    flex-grow: 1;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.social-image {
+    width: auto;
+    height: 100%;
+    cursor: pointer;
+}
+
+.footer-copyright-box {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 1dvh
+}
+
+
+/************************* 모바일(태블릿 세로 포함)  *************************/
+@media (max-width:767px) {
+    .footer-container {
+        width: 90%;
+    }
+    .footer-social-box {
+        width: 50%;
+    }
+    .footer-copyright-box {
+        font-size: 4dvw;
+    }
+}

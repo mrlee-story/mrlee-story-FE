@@ -1,0 +1,69 @@
+/* modal창 외부화면 */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+/* modal창 */
+.modal-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-box {
+  min-width: 40dvw;
+  max-width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  gap: 2rem;
+  padding: 3.6rem;
+  border: 1px solid rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  /* left: 2rem;
+  top: 30rem; */
+  /* width: 90%; */
+}
+
+.modal-title-box {
+  font-size: 1.875rem; /* Equivalent to text-3xl in Tailwind */
+  font-weight: 700; /* Equivalent to font-bold in Tailwind */
+  color: #000000; /* White text */
+}
+
+.modal-alert-text-box {
+  color: rgba(255, 0, 0, 0.7);
+  text-align: center;
+}
+
+.modal-button-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+
+/************************* 모바일(태블릿 세로 포함)  *************************/
+@media (max-width:767px) {
+
+  .modal-button-box {
+    flex-direction: column!important;
+  }
+}

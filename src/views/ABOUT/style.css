@@ -1,0 +1,243 @@
+#about-container {
+    width:100dvw;
+    height:100dvh;
+    float:right;
+}
+
+.scroll-indicator-container {
+    z-index: 5000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100dvh;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.scroll-indicator-box {
+    background-color: rgba(70, 70, 70, 0.1);
+    height: 60%;
+    width: 10%;
+    
+    border-radius: 30%;
+    overflow: hidden;
+}
+
+.scroll-indicator-bar {
+    z-index: 50000000000;
+    /* position: absolute; */
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    /* border-radius: 50%; */
+}
+
+.about-text-item-container {
+    /* border: 1px solid red; */
+    width: 100dvw;
+    height: 100dvh;
+}
+
+
+/* 1번 섹션 */
+.about-text-item-header-1 {
+    color: rgba(50, 50, 50, 0.7);
+    margin-top: 11dvh;
+    margin-left: 5dvw;
+    width: 90dvw;
+
+    font-family:'감탄로드돋움체-Bold';
+    font-size: 3rem;
+    font-weight:bold;
+}
+.about-text-item-content-box {
+    position: static;
+    width: 90dvw;
+    margin: 0 auto;
+    padding-top: 5dvh;
+
+    display: grid;
+    grid-template-columns: 30dvw 15dvw 1fr;
+    place-items: center;
+    place-content: center;
+    
+    overflow: auto;
+}
+.about-text-item-cotent{
+    height: auto;
+
+    overflow: auto;
+}
+
+.about-me-table {
+    font-weight:bold;
+    border-left:3px solid gray;
+}
+.about-me-table td{
+    padding-left: 1dvw;
+    padding-bottom: 3dvh;
+    font-family:'감탄로드돋움체-Thin';
+    font-size: 1.7rem;
+    color: rgba(50, 50, 50, 0.7);
+    text-align: left;
+    white-space:pre;
+    text-overflow:ellipsis;
+    max-width: 20dvw;
+}
+.about-me-table th, .about-introduce-table th {
+    padding-left: 1dvw;
+    padding-bottom: 3dvh;
+    font-size: 2rem;
+    font-family:'감탄로드돋움체-Regular';
+    text-align: left;
+}
+
+.about-introduce-table td {
+    padding-left: 1dvw;
+    padding-bottom: 3dvh;
+    font-family:'감탄로드돋움체-Thin';
+    font-size: 1.3rem;
+    color: rgba(50, 50, 50, 0.7);
+    text-align: left;
+    white-space:pre;
+    text-overflow:ellipsis;
+    max-width: 40dvw;
+}
+.about-introduce-table {
+    margin-top: 30dvh;
+    font-weight:bold;
+    border-left:3px solid gray;
+}
+
+/* 2번 섹션 */
+.about-skill-container {
+    /* border: 5px solid green; */
+
+    width: 60dvw;
+    height: 100dvh;
+    float: right;
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    
+}
+
+.about-skill-container .about-skill-item-box:first-child {
+    grid-row: 1 / span 2;
+    margin-top: 30%;
+    place-content: unset!important;
+    /* grid-column: 1 / span 2; */
+}
+
+.about-skill-item-box {
+    /* grid-column: 1 / 2;
+    grid-row: 1 / 2; */
+    /* display: inline; */
+    /* border: 1px solid red; */
+    /* grid-column: 1 / 2; */
+
+    /* width: 50%;
+    height: 50%; */
+    place-content: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+
+
+/* 3번 섹션 */
+.about-text-item-2page-container {
+    /* border: 1px solid blue; */
+    width: 100dvw;
+    float: left;
+    /* height: 200dvh; */
+}
+.about-text-item-2page-header {
+    height: 15dvh;
+    /* border: 1px solid green; */
+}
+.about-milestones-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    width: 100dvw;
+    text-shadow: 2px 2px 6px var(--background-white-color);
+}
+
+.about-milestones-container div {
+    /* border: 1px solid black; */
+    padding-left: 3dvw;
+    text-shadow: 2px 2px 6px var(--background-white-color);
+}
+
+.about-milestones-table th {
+    font-family: '감탄로드돋움체-Bold';
+    text-align: left;
+    padding: 3dvh 0;
+    font-size: 1.7rem;
+    color: rgba(100, 100, 100, 1.5);
+}
+
+.about-milestones-table tr td {
+    padding-left: 10px;
+    padding-bottom: 2dvh;
+    font-size: 1.125rem;
+}
+
+
+/************************* 모바일(태블릿 세로 포함)  *************************/
+@media (max-width:767px) {
+    /** 1번 섹션 */
+    .about-text-item-content-box {
+        padding-left: 3dvw;
+        grid-template-columns : none;
+        grid-template-rows: 35dvh 0 35dvh;
+        width: 100dvw;
+    }
+
+    .about-text-item-cotent {
+        width: 100dvw;
+        height: 35dvh;
+    }
+    
+    .about-me-table td, .about-me-table th {
+        font-size : 1rem;
+        text-shadow: -1px 0px var(--background-white-color), 0px 1px var(--background-white-color), 1px 0px var(--background-white-color), 0px -1px var(--background-white-color);
+        /* text-shadow: 2px 2px 6px var(--background-white-color); */
+    }
+    .about-introduce-table {
+        margin-top: 0;
+    }
+
+    .about-introduce-table td, .about-introduce-table th {
+        font-size : 1rem;
+        text-shadow: -1px 0px var(--background-white-color), 0px 1px var(--background-white-color), 1px 0px var(--background-white-color), 0px -1px var(--background-white-color);
+        /* text-shadow: 2px 2px 6px var(--background-white-color); */
+    }
+
+    /** 2번 섹션 */
+    .about-skill-container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        float: none;
+        margin-bottom: 5dvh;
+    }
+
+    .about-skill-item-box {
+        margin-top: 3dvh!important;
+        overflow: visible;
+    }
+
+    /** 3번 섹션  */
+    .about-milestones-container {
+        display: block;
+    }
+    .about-milestones-table * {
+        font-weight: bold;
+        text-shadow: -1px 0px var(--background-white-color), 0px 1px var(--background-white-color), 1px 0px var(--background-white-color), 0px -1px var(--background-white-color);
+    }
+}

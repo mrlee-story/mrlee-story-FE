@@ -1,0 +1,136 @@
+/************************* 데스크탑(테블릿 가로 포함)  *************************/
+#header {
+    display: flex;
+    justify-content: center;
+    width: 100dvw;
+    height: 10dvh;
+    z-index: 600;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    /* border: 1px solid black; */
+    /* background-color: rgba(255,255,255,0); */
+}
+
+.header-container {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/** left box */
+.header-logo-box {
+    display: flex;
+    width: 237px;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-navigate-box {
+    width: 100%;
+    height: 100%;
+    padding-top: 5dvh;
+    padding-left: 1dvw;
+}
+
+.header-navigate-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgba(100, 100, 100, 1);
+    cursor: pointer;
+}
+
+/** right box */
+.header-button-box {
+    display: flex;
+    width: 35px;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+    /* position: flex;
+    z-index: 1000; */
+}
+
+.menu-trigger,
+.menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+}
+
+.menu-trigger {
+    align-self: center;
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+
+.menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #777;
+    border: 1px solid #FFF;
+    border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+    top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+    top: 45%;
+}
+
+.menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+}
+
+.menu-trigger span.active:nth-of-type(1) {
+    -webkit-transform: translateY (15px) rotate (-45deg);
+    transform: translateY(15px) rotate(-45deg);
+}
+
+.menu-trigger span.active:nth-of-type(2) {
+    opacity: 0;
+}
+
+.menu-trigger span.active:nth-of-type(3) {
+    -webkit-transform: translateY(-15px) rotate(45deg);
+    transform: translateY(-15px) rotate(45deg);
+}
+
+/************************* 모바일(태블릿 세로 포함)  *************************/
+@media (max-width:767px) {
+    .header-container {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-logo-box {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    /** right box */
+    .header-button-box {
+        display: flex;
+        position: fixed;
+        right: 2%;
+        width: 15%;
+        height: 10dvh;
+        align-items: center;
+        cursor: pointer;
+        /* position: flex;
+        z-index: 1000; */
+    }
+}

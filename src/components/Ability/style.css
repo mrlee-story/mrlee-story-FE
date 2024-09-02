@@ -1,0 +1,52 @@
+.about-skill-item {
+    /* border: 1px solid black; */
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.about-skill-item-title {
+    font-family:'감탄로드돋움체-Regular';
+    font-size: 1.7rem; /* 18px */
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.about-skill-item-each-box {
+    width: 100%;
+}
+
+.about-skill-item-each-title {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.5rem; /* 28px */
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.motion-progress-bar-box {
+    height: 0.5rem; /* Equivalent to h-2 in Tailwind */
+    width: 100%; /* Equivalent to w-full in Tailwind */
+    background-color: #e2e8f0; /* Equivalent to bg-gray-200 in Tailwind */
+    border-radius: 9999px; /* Equivalent to rounded-full in Tailwind */
+    margin-top: 0.5rem; /* Equivalent to mt-2 in Tailwind */
+}
+.motion-progress-bar {
+    height: 100%; /* Equivalent to h-full in Tailwind */
+    background-color: #6366f1; /* Equivalent to bg-indigo-500 in Tailwind */
+    border-radius: 9999px; /* Equivalent to rounded-full in Tailwind */
+}
+
+
+/************************* 모바일(태블릿 세로 포함)  *************************/
+@media (max-width:767px) {
+    .about-skill-item-title {
+        display: none;
+    }
+
+    .about-skill-item-each-title {
+        font-size: 1rem;
+        /* line-height: 1.5rem; */
+        color: rgba(0, 0, 0, 0.5);
+    }
+    .motion-progress-bar-box {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,305 @@
+#library-container img, #library-container fieldset {
+    border: 0;
+}
+
+#library-container img {
+    vertical-align: top
+}
+
+/* #library-container ul, #library-container ol {
+    list-style:none;
+} */
+
+/* #library-container em, #library-container address {
+    font-style:normal
+} */
+
+/* #library-container a {
+    text-decoration:none
+} */
+
+/* #library-container a:hover, #library-container a:active, #library-container a:focus {
+    text-decoration:underline
+} */
+
+/****************** style */
+#library-container {
+	width: 100dvw;
+	height: auto;
+	margin-top: 10dvh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.library-title-box {
+	width: 90%;
+}
+
+.library-text-title {
+	display: inline;
+	font-size: 4rem; 
+	line-height: 1.375;
+	font-family:'감탄로드돋움체-Bold';
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.library-text-descriptive {
+	display: inline;
+	font-size: 1.125rem;
+	color: #4B5563;
+}
+
+.library-fixed_img_box {
+	width: 100%;
+	height: auto;
+	align-content: center;
+	text-align: center;
+	align-items: center;
+}
+
+.library-fixed_img_box ul {
+	border-bottom: 1px solid #ccc;
+	zoom:1;
+	width: 100%;
+	height: auto;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+}
+.library-fixed_img_box ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.library-fixed_img_box li {
+	display: inline-block;
+	position: relative;
+	top: 1px;
+	/* float: left; */
+	width: 20dvw;
+	height: 20dvw;
+	/* border-bottom: 1px solid #ccc; */
+	/* padding: 20px 15px 0 15px; */
+	margin: 5dvw;
+}
+.library-fixed_img_box li .library-anchor-box {
+	display: block;
+	color: #333;
+	text-decoration: none;
+	width: 100%;
+	height: 80%;
+	cursor: pointer;
+}
+.library-fixed_img_box li .library-anchor-box .library-thumbnail {
+	display: block;
+	position: relative;
+	background-color: #ededed;
+	text-align: center;
+	line-height: 120px;
+	width: 100%;
+	height: 80%;
+	align-content: center;
+}
+.library-fixed_img_box li .library-anchor-box .library-thumbnail img {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	margin: auto;
+	object-fit: contain;
+}
+.library-fixed_img_box li .library-anchor-box .library-thumbnail em {
+	display: none;
+	opacity: .6;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	color: #fff;
+	font-weight: bold;
+	font-family: verdana,sans-serif;
+	text-align: center;
+	align-content: center;
+}
+.library-fixed_img_box li .library-anchor-box:hover .library-thumbnail em {
+	display: block;
+}
+.library-fixed_img_box li .library-anchor-box strong {
+	display: block;
+	/* padding: 6px 0 2px; */
+	/*text-decoration: underline;*/
+	/* line-height: 1.4; */
+	height: 20%;
+	align-content: center;
+	background-color: rgba(200, 200, 200, 0.2);
+}
+.library-fixed_img_box li .library-anchor-box:hover strong {
+	text-decoration: underline;
+	background-color: rgba(200, 200, 200, 0.5);
+}
+
+
+.library-fixed_img_box li .library-anchor-box-blank {
+	display: block;
+	text-decoration: none;
+	width: 100%;
+	height: 80%;
+}
+.library-fixed_img_box li .library-anchor-box-blank .library-thumbnail {
+	display: block;
+	position: relative;
+	text-align: center;
+	line-height: 120px;
+	width: 100%;
+	height: 80%;
+	align-content: center;
+}
+.library-fixed_img_box li .library-anchor-box-blank .library-thumbnail img {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	margin: auto;
+	object-fit: contain;
+}
+.library-fixed_img_box li .library-anchor-box-blank .library-thumbnail em {
+	display: none;
+	opacity: .6;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	color: #fff;
+	font-weight: bold;
+	font-family: verdana,sans-serif;
+	text-align: center;
+	align-content: center;
+}
+.library-fixed_img_box li .library-anchor-box-blank:hover .library-thumbnail em {
+	display: block;
+}
+.library-fixed_img_box li .library-anchor-box-blank strong {
+	display: block;
+	/* padding: 6px 0 2px; */
+	/*text-decoration: underline;*/
+	/* line-height: 1.4; */
+	height: 20%;
+	align-content: center;
+}
+
+
+.library-fixed_img_box li p {
+	color: #666;
+	font-size: .9em;
+	height: auto;
+	align-content: center;
+	overflow: scroll;
+}
+
+.library-detail-container {
+	width: 70dvw;
+	height: 70dvh;
+	text-align: center;
+	align-content: center;
+	overflow: scroll;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.library-detail-title{
+	height: 10dvh;
+	align-content: center;
+	color: rgba(100, 100, 100, 0.95);
+	font-family:'감탄로드돋움체-Bold';
+	font-weight: bold;
+	font-size: 3dvw; 
+	padding-bottom: 20px;
+}
+
+.library-detail-thumbnail{
+	height: 40dvh;
+	color: black!important;
+	padding: 1dvh;
+	box-sizing: content-box;
+}
+
+.library-detail-contents {
+	margin-top: 10px;
+}
+.library-detail-contents * {
+	color: black;
+	height: auto;
+}
+
+.library-detail-contents table {
+	margin: 0 auto;
+	width: 80%;
+	height: 100%;
+}
+.library-detail-contents table th {
+	padding: 10px 0;
+	border-right: 2px solid rgba(100, 100, 100, 0.95);
+	width: 20%;
+}
+.library-detail-contents table td {
+	padding: 10px 0 10px 10px;
+	text-align: left;
+	width: 80%;
+}
+.library-detail-contents table td a {
+	text-decoration:underline;
+	color: blue;
+}
+.library-detail-contents table td a:hover {
+	text-decoration:none;
+	color: black;
+}
+.library-detail-contents table td p {
+	padding: 5px;
+}
+
+
+/************************* 모바일(태블릿 세로 포함)  *************************/
+@media (max-width:767px) {
+	.library-title-box {
+		width: 100%;
+		text-align: center;
+	}
+	.library-text-title {
+		display: block;
+		font-size:2rem!important;
+	}
+
+	.library-fixed_img_box li {
+		display: inline-block;
+		position: relative;
+		top: 1px;
+		width: 30dvw;
+		height: 30dvw;
+		/* border-bottom: 1px solid #ccc; */
+		/* padding: 20px 15px 0 15px; */
+		margin: 5dvw;
+	}
+
+	.library-detail-container {
+		width: 90dvw;
+	}
+
+	.library-detail-title {
+		font-size: 1.5rem;
+	}
+
+	.library-detail-thumbnail img {
+		width: 90%;
+		height: auto;
+	}
+
+}

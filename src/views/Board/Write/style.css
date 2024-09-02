@@ -1,0 +1,189 @@
+#board-write-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.board-write-container {
+    position: relative;
+    /* z-index: -500!important; */
+    width: 100dvw;
+    height: 100dvh;
+    margin: auto;
+    display: flex;
+    place-items: start;
+    justify-content: center;
+    /* top: 10dvh; */
+}
+
+.board-write-control-box {
+    box-sizing: content-box;
+    display: flex;
+    position:fixed;
+    flex-direction: column;
+    left: 65dvw;
+    height: 90dvh;
+    width: 33dvw;
+    align-items: center;
+    justify-content: center;
+}
+
+.board-write-box{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 5dvw;
+    padding-top: 10dvh;
+    width: 60dvw;
+}
+
+
+.board-write-title-box{
+    width: 100%;
+}
+
+.board-writer-title-textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    resize: none;
+    color: rgba(0, 0, 0, 1);
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+
+.board-write-content-box{
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    height: 80dvh;
+}
+
+.board-write-content-textarea{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    resize: none;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.1250rem;
+    font-weight: 500;
+    line-height: 150%;
+    
+}
+
+.board-write-images-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.board-write-image-box{
+    width: 100%;
+    position: relative;
+}
+
+.board-write-image{
+    width: 100%;
+}
+
+.board-write-agreed-description {
+    background-color: rgba(200, 200, 200, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    width: 85%;
+    height: 20%;
+    overflow: scroll;
+    font-size: 0.8125rem;
+}
+
+.board-write-agreed-description::-webkit-scrollbar {
+    display: inline;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.board-write-agreed-description::-webkit-scrollbar-thumb {
+    display: inline;
+    background-color: rgba(190, 190, 190, 0.5);
+}
+.board-write-agreed-description::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(190, 190, 190, 0.2);
+}
+
+.board-write-agreed-description table {
+    width: 85%;
+    margin: 5px auto;
+    border-collapse: collapse;
+}
+
+.board-write-agreed-description table th, 
+.board-write-agreed-description table td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.image-close {
+    position: absolute;
+    top : 20px;
+    right: 20px;
+}
+
+.board-write-writer-info-box {
+    width: 100%;
+}
+
+/************************* 모바일(태블릿 세로 포함)  *************************/
+@media (max-width:767px) {
+    #board-write-wrapper {
+        position: static;
+        width: 90%;
+    }
+    .board-write-container {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        width: auto;
+        top: 10dvh;
+    }
+    .board-write-container .horizontal-layout-container.left-60, 
+    .board-write-container .horizontal-layout-container.right-40 {
+        width: 100dvw!important;
+        text-align: center;
+        justify-content: unset!important;
+        margin-top: 0;
+        height: auto;
+    }
+    .board-write-box {
+        padding-left: 0;
+        padding-top: 1dvh;
+        gap: 3dvh;
+        width: 90%;
+    }
+        
+    .board-write-content-box {
+        height: auto;
+        min-height: 40dvh;
+    }
+
+    .board-write-control-box {
+        margin-top: 5dvh;
+        position: static;
+        display: block;
+        width: 90%;
+    }
+    .able-button-dark, .disable-button, .able-button-light {
+        margin: 1dvh auto!important;
+    }
+    .board-write-agreed-description {
+        margin: 1dvh auto;
+    }
+}
+

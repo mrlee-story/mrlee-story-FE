@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'HakgyoansimMonggeulmonggeulR';
+  src:url('assets/fonts/HakgyoansimMonggeulmonggeulR.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'KCC-Ganpan';
+  src:url('assets/fonts/KCC-Ganpan.ttf') format('truetype');
+}
+@font-face {
+  font-family: '전기안전체';
+  src:url('assets/fonts/전기안전체 Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'KCC-Ganpan-Web';
+  src:url('assets/fonts/KCC-Ganpan.woff') format('woff');
+}
+@font-face {
+  font-family: '감탄로드돋움체-Thin';
+  src:url('assets/fonts/감탄로드돋움체 Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: '감탄로드돋움체-Regular';
+  src:url('assets/fonts/감탄로드돋움체 Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: '감탄로드돋움체-Bold';
+  src:url('assets/fonts/감탄로드돋움체 Bold.ttf') format('truetype');
+}
+body {
+  margin: 0;
+  font-family: '감탄로드돋움체-Regular', '감탄로드돋움체-Thin', '감탄로드돋움체-Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* * {
+  border: 1px solid black;
+} */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+} */
+
+#root {
+  width: 100%;
+  height: 100dvh;
+}

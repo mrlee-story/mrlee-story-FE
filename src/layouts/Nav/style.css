@@ -1,0 +1,130 @@
+@media (min-width:768px) {
+    #nav {
+        z-index: 500; /* z-10 */
+        position: fixed; /* fixed */
+        top: 0; /* top-0 */
+        right: 0; /* right-0 */
+        bottom: 0; /* bottom-0 */
+        background-color: white; /* bg-white */
+        /* transition: all 2s; */
+        
+        flex-direction: column; /* flex-col */
+        /* background-color: yellowgreen; */
+    
+        width: 0rem;
+        display: flex;
+    }
+    
+    .show-menu {
+        width: 20rem!important;
+        animation: slide-in 0.5s forwards;
+    }
+    
+    .hide-menu {
+        width : 20rem!important;
+        animation: slide-out 0.5s forwards;
+    }
+    
+    .nav-container {
+        flex: 1; /* flex-1 */
+        display: flex; /* flex */
+        align-items: flex-start; /* items-start */
+        justify-content: center; /* justify-center */
+        flex-direction: column; /* flex-col */
+        gap: 1.5rem; /* gap-6 (6 * 0.25rem) */
+        padding: 2rem; /* p-8 (8 * 0.25rem) */
+        margin: auto;
+    }
+    
+    .auth-button-container {
+        height: 10dvh;
+    }
+    
+    @keyframes slide-in {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slide-out {
+        from {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(100%);
+            opacity: 0;
+            display: none;
+        }
+    }
+}
+
+/************************* 모바일(태블릿 세로 포함)  *************************/
+@media (max-width:767px) {
+    #nav {
+        z-index: 500; 
+        position: fixed;
+        top: 0; 
+        left: 0;
+        width: 100dvw;
+        height: 100dvh;
+        /* bottom: 0;  */
+        background-color: white; 
+        
+        flex-direction: column; 
+    
+        display: flex;
+    }
+
+    .show-menu {
+        width: 100%; 
+        animation: slide-in-mobile 0.5s forwards;
+    }
+    
+    .hide-menu {
+        width: 1000%;
+        animation: slide-out-mobile 0.5s forwards;
+    }
+
+    .nav-container {
+        flex: 1; 
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        flex-direction: column;
+        gap: 1.5rem; 
+        padding: 2rem;
+        margin: auto;
+    }
+    .auth-button-container {
+        height: 10dvh;
+    }
+}
+
+@keyframes slide-in-mobile {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out-mobile {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+        display: none;
+    }
+}
