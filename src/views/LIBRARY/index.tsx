@@ -144,7 +144,7 @@ export default function Library() {
                   </tr>
 
                   <tr>
-                    <th>회고</th>
+                    <th>설명</th>
                     <td>
                       {
                         content.desc.detail.map( (detail, index) => (
