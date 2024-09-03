@@ -35,6 +35,7 @@ import './style.css';
 import * as THREE from 'three';
 import { ForwardRefComponent } from '@react-three/drei/helpers/ts-utils';
 import { AsciiEffect } from 'three-stdlib';
+import LoadingScreen from 'components/LoadingScreen';
 
 const SECTION_COUNT = 5;
 
@@ -52,6 +53,9 @@ export default function Main() {
   const scrollRef = useRef(null);
   // 모바일 여부
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  
+  //  state : 로딩 완료 여부 상태 //
+  const [ started, setStarted ] = useState<boolean>(false);
   // 썸네일 이미지
   // const {yColorArray, loadYColorArray, loadThumbnailFileList } = useGalleryMosaicCacheStory();
 
@@ -114,6 +118,7 @@ export default function Main() {
 //  render : 메인 Body 컴포넌트 렌더링  //
   return (
     <>
+      <LoadingScreen started={started} setStarted={setStarted} />
       <Canvas className={`r3fCanvas`} shadows camera={{ position: [0, 150, 400], fov:50 }}       onCreated={({ camera }) => {camera.lookAt(0, 0, 0);}} >
         <color attach="background" args={section==3? ['#DDDDDD'] : ['#ececec']} />
         <ScrollControls pages={SECTION_COUNT}  damping={0.1} >

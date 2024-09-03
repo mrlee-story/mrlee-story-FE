@@ -24,13 +24,6 @@ import './App.css';
 import About from 'views/ABOUT';
 import LoadingScreen from 'components/LoadingScreen';
 
-//  TODO delete //
-const getRandomPosition = (radius: number) => {
-  const angle = Math.random() * Math.PI * 2;
-  const distance = Math.random() * radius;
-  return new Vector3(Math.cos(angle) * distance, Math.sin(angle) * distance, 0);
-}
-
 
 //  Components : Application 메인 컴포넌트  //
 function App() {
@@ -41,8 +34,6 @@ function App() {
   const [ cookies, , removeCookie ] = useCookies([JWT_COOKIE_KEY]);
   //  state : 중복 실행 발지를 위한 cookie 복사본 상태
   const [ accessToken, setAccessToken ] = useState<string>(null);
-  //  state : 로딩 완료 여부 상태 //
-  const [ started, setStarted ] = useState<boolean>(false);
 
 
   //  function : 로그인 유저 response 처리 함수 //
@@ -95,7 +86,6 @@ function App() {
   //  render : Application 메인 컴포넌트 렌더링 //
   return (
     <>
-      <LoadingScreen started={started} setStarted={setStarted} />
       <MotionConfig transition={{...FramerMotionConfig}}>
           <Routes>
             <Route element={<Container />}>
