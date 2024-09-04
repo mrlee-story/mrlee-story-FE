@@ -111,10 +111,15 @@ export default function CommentItem({ commentListItem, loginUser, boardWriterNum
 
         const isCommenter:boolean = checkCommenter();
         // 작성자가 아니면 권한 인증(관리자도 타 게시물 수정 권한은 없음)
+
+        patchValidation:
         if (!isCommenter) {
             switch (writerAuthorizationLevel) {
                 // 상황 1 - 게시물 작성자가 관리자 : 무조건 비인가
                 case UserAuthority.ADMIN:
+                    if (loginUser.authorizationLevel==UserAuthority.ADMIN) {
+                        break patchValidation;
+                    }
                     alert('권한이 없습니다.');
                     // if (editOrDelete) setEditOrDelete(null);
                     setShowPasswordModal(null);
@@ -159,7 +164,7 @@ export default function CommentItem({ commentListItem, loginUser, boardWriterNum
         }
 
         const isCommenter:boolean = checkCommenter();
-        // 작성자가 아니면 권한 인증(관리자도 타 게시물 수정 권한은 없음)
+        // 작성자가 아니면 권한 인증
         if (!isCommenter && loginUser?.authorizationLevel!=UserAuthority.ADMIN) {
             switch (writerAuthorizationLevel) {
                 // 상황 1 - 게시물 작성자가 관리자 : 무조건 비인가
@@ -289,9 +294,10 @@ export default function CommentItem({ commentListItem, loginUser, boardWriterNum
         const now = dayjs();
         const writeTime = dayjs(regdate);
         const gap = now.diff(writeTime, 's');
+        
         if (gap < 60) return `${gap}초 전`;
         if (gap < 3600) return `${Math.floor(gap / 60)}분 전`;
-        if (gap < 86400) return `${Math.floor(gap / 3600)}분 전`;
+        if (gap < 86400) return `${Math.floor(gap / 3600)}시간 전`;
         return `${Math.floor(gap / 86400)}일 전`;
     }
     
